@@ -1,0 +1,14 @@
+.p-header {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  background-color: rgba(24, 108, 119, 0.486);
+  .p-header_link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 1008px;
+    height: 50px;
+    margin: 0 auto;
+  }
+}
