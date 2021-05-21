@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+    <p id="post-<%= post.id %>">
+      <%= post.genre %> : <%= post.content %> : <%= post.user.name.present? ? "投稿者 #{post.user.name}" : "ID: #{post.user.id}" %>
+      <%= post.created_at  %>
+    <%= link_to '削除', post_path(post), method: :delete, data: { confirm: '削除しますか?', remote: true } %>
+    </p>
+<% else %>
+  <p>ログインしてください</p>
+<% end %>
