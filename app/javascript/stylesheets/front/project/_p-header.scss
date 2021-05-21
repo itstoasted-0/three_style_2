@@ -1,14 +1,12 @@
 .p-header {
   width: 100%;
-  position: relative;
-  height: 50px;
-  background-color: rgba(24, 108, 119, 0.486);
+  background-color: rgba(39, 123, 126, 0.377);
   .p-header_link {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
-    width: 1008px;
-    height: 50px;
-    margin: 0 auto;
+    .p-header_link_item {
+      margin: 20px;
+    }
   }
 }

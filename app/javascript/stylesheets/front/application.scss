@@ -1,3 +1,10 @@
-// import project styles
+//   import foundation styles
+@import './foundation/f-mixin'; // mixinの設定
 
+
+// import project styles
 @import './project/p-header';
+
+
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
