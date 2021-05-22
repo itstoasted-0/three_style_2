@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     get "users/guest_sign_in", to: "users/sessions#guest_sign_in"
   end
   resources :posts
-  resource :users, only: :show
+  resources :users
 end

@@ -1,17 +1,24 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: :index
-  before_action :set_post, only: %i[destroy]
+  before_action :set_post, only: %i[edit update destroy]
 
   def index
     @posts = Post.order(id: :desc)
   end
 
   def new
-    @post = Post.new
   end
 
   def create
     @post = current_user.posts.create(post_params)
+  end
+
+  def edit
+
+  end
+
+  def update
+    @post.update!(post_params)
   end
 
   def destroy
