@@ -1,0 +1,21 @@
+//  Media Queries
+$breakpoints: (
+  'sm': 'screen and (max-width: 400px)',
+  'md': 'screen and (max-width: 768px)',
+  'lg': 'screen and (max-width: 1000px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+//  Font
+$font-family-base: Quicksand, 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro',
+  メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+$font-number: 'Chakra Petch', sans-serif;
+$font-title: 'Tomorrow', sans-serif;
+
+//  Color
+$font-color: #222;
+$note-color: #d90000;
+$main-color: #13335f;
+$sub-color: #d60029;
+$accent-color: #d0aa43;
+$link-color: #75cbe0;

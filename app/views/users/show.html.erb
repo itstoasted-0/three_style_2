@@ -1,5 +1,14 @@
 <% provide(:title, @user.name) %>
-<%= "My page (#{@user.name})" %>
-<% @posts.each do |post| %>
-  <p><%= post.genre %> : <%= post.content %></p>
-<% end %>
+<div>
+  <p>My Page</p>
+</div>
+<div>
+  <p><%= "name: #{@user.name}" %></p>
+  <p><%="email: #{@user.email}" %> </p>
+</div>
+<div>
+  <p>投稿</p>
+  <% @posts.each do |post| %>
+    <p><%= post.genre %> : <%= post.content %></p>
+  <% end %>
+</div>

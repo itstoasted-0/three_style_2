@@ -1,5 +1,7 @@
 //   import foundation styles
+@import './foundation/f-variable'; // 変数・フォント・ブレイクポイント等の定義
 @import './foundation/f-mixin'; // mixinの設定
+@import './foundation/f-reset'; // reset cssの設定
 
 //   import layout styles
 @import './layout/l-main';
