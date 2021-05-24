@@ -19,10 +19,12 @@ class PostsController < ApplicationController
 
   def update
     @post.update!(post_params)
+    @msg = "更新しました"
   end
 
   def destroy
     @post.destroy!
+    @msg = "削除しました"
   end
 
   private

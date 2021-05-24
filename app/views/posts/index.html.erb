@@ -1,8 +1,21 @@
 <% provide(:title, '投稿一覧') %>
-<h1>新規投稿</h1>
-<%= render 'form', post: Post.new, value: "投稿" %>
 
-<h1>投稿一覧</h1>
-<div id="posts">
-  <%= render @posts %>
+<div class="l-main_content_wrap">
+  <div id="alert-message">
+  </div>
+
+  <div>
+    <h1>投稿一覧</h1>
+    <div id="posts">
+      <%= render @posts %>
+    </div>
+  </div>
+
+  <div>
+    <h1>投稿</h1>
+    <div>
+      <%= render 'form', post: Post.new, value: "投稿" %>
+    </div>
+  </div>
+
 </div>

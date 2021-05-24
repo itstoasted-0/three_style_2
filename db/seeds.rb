@@ -1,3 +1,6 @@
+
+User.create(name: "reo", email: "aaa@aaa.aaa", password: "aaaaaa")
+
 user = User.first
 Post.create!(genre: 1, content: "aaa", user_id: user.id)
 Post.create!(genre: 2, content: "bbb", user_id: user.id)

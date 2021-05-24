@@ -1,3 +1,5 @@
+<% provide(:title, @user.name) %>
+<%= "My page (#{@user.name})" %>
 <% @posts.each do |post| %>
   <p><%= post.genre %> : <%= post.content %></p>
 <% end %>

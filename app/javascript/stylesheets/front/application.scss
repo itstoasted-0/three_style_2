@@ -1,6 +1,9 @@
 //   import foundation styles
 @import './foundation/f-mixin'; // mixinの設定
 
+//   import layout styles
+@import './layout/l-main';
+
 
 // import project styles
 @import './project/p-header';

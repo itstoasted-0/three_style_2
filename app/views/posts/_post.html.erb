@@ -1,21 +1,20 @@
 <% if user_signed_in? %>
-    <p id="post-<%= post.id %>">
-      <p>
-        <%= post.user.name.present? ? post.user.name : "ID : #{post.user.id}" %>
-      </p>
-      <p>
-        <%= post.genre %>
-      </p>
-      <p>
-        <%= post.content %>
-      </p>
-      <p>
-        <%= post.created_at  %>
-      </p>
+  <div id="post-<%= post.id %>">
+    <p>
+      <%= post.user.name.present? ? post.user.name : "ID : #{post.user.id}" %>
+    </p>
+    <p>
+      <%= post.genre %>
+      <%= post.content %>
+    </p>
+    <p>
+      <%= post.created_at  %>
+    </p>
+    <p>
       <%= link_to '更新', edit_post_path(post), data: { remote: true } %>
       <%= link_to '削除', post_path(post), method: :delete, data: { confirm: '削除しますか?', remote: true } %>
-      <hr>
     </p>
+  </div>
 <% else %>
   <p>ログインしてください</p>
 <% end %>
