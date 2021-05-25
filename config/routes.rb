@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   devise_scope :user do
     get "users/guest_sign_in", to: "users/sessions#guest_sign_in"
   end
-  resources :posts
+  resources :posts do
+    resource :likes, only: [:create, :destroy]
+  end
   resources :users, :only => [:index, :show]
 end
