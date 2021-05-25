@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <div>
     <p>
-      <%= link_to user.name, user_path(current_user) %>
+      <%= link_to user.name, user_path(user) %>
     </p>
   </div>
 <% else %>

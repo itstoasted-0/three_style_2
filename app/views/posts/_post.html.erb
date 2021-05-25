@@ -8,7 +8,7 @@
       <%= post.content %>
     </p>
     <p>
-      <%= post.created_at  %>
+      <%= l post.created_at  %>
     </p>
     <p>
       <%= link_to '更新', edit_post_path(post), data: { remote: true } %>

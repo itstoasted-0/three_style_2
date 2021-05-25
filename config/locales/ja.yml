@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      post: 投稿
+    attributes:
+      post:
+        genre: ジャンル
+        content: 内容
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
