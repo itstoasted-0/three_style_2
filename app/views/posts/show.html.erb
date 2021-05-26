@@ -1,6 +1,9 @@
 <h1>投稿詳細</h1>
 <p>【name】 <%= @post.user.name %></p>
 <p>【投稿内容】 <%= @post.content %></p>
+<% if @post.img? %>
+  <p><%= image_tag @post.img.url %></p>
+<% end %>
 <p>【作成日時】 <%= l @post.created_at %></p>
 <p id="post-like-<%= @post.id %>">
   <% if @post.liked_by?(current_user) %>

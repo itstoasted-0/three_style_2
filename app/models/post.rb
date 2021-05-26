@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   # post.liked_users で post を「いいね!」しているユーザーの一覧を取得できるようになる
   has_many :liked_users, through: :likes, source: :user
+  mount_uploader :img, ImgUploader
 
   enum genre: {
     others: 0,

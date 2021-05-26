@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:genre, :content)
+    params.require(:post).permit(:genre, :content, :img)
   end
 
   def set_post

@@ -4,6 +4,9 @@
     <div class="p-post_index_list_content">
       <p><%= link_to post.user.name, user_path(post.user) %></p>
       <p>【<%= post.genre %>】 : <%=  post.content %></p>
+      <% if post.img? %>
+        <p><%= image_tag post.img.url %></p>
+      <% end %>
       <p><%= time_ago_in_words(post.created_at) %>前</p>
     </div>
     
@@ -21,7 +24,7 @@
         <%= link_to '削除', post_path(post), method: :delete, data: { confirm: '削除しますか?', remote: true } %>
       </p>
     </div>
-    
+
   </div>
 <% else %>
   <p>ログインしてください</p>

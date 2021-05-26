@@ -1,6 +1,7 @@
 <%= form_with model: post, local: false do |f| %>
   <p><%= f.label :genre, "ジャンル" %> <%= f.select :genre, Post.genres.keys %></p>
   <p><%= f.label :content, "投稿内容" %> <%= f.text_field :content %></p>
+  <p><%= f.file_field :img, accept: "image/png,image/jpeg,image/gif" %></p>
   <%= f.submit value %>
   <% if value == '更新' %>
     <%= link_to '取消', new_post_path, data: { remote: true } %>
