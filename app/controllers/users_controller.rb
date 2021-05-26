@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @posts = current_user.posts
+    @post = Post.find(params[:id])
   end
 
   private
@@ -15,4 +16,5 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find(params[:id])
   end
+  
 end

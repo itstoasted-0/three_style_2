@@ -1,26 +1,27 @@
 <% if user_signed_in? %>
-  <div id="post-<%= post.id %>">
-    <p>
-      <%= post.user.name.present? ? post.user.name : "ID : #{post.user.id}" %>
-    </p>
-    <p>
-      【<%= post.genre %>】 : <%=  post.content %>
-    </p>
-    <p id="post-like-<%= post.id %>">
-      <% if post.liked_by?(current_user) %>
-        <%= render "like", post: post %>
-      <% else %>
-        <%= render "dislike", post: post %>
-      <% end %>
-    </p>
-    <p>
-      <%= l post.created_at  %>
-    </p>
-    <p>
-      <%= link_to "詳細", post %>
-      <%= link_to '更新', edit_post_path(post), data: { remote: true } %>
-      <%= link_to '削除', post_path(post), method: :delete, data: { confirm: '削除しますか?', remote: true } %>
-    </p>
+  <div id="post-<%= post.id %>" class="p-post_index_list">
+
+    <div class="p-post_index_list_content">
+      <p><%= link_to post.user.name, user_path(post.user) %></p>
+      <p>【<%= post.genre %>】 : <%=  post.content %></p>
+      <p><%= time_ago_in_words(post.created_at) %>前</p>
+    </div>
+    
+    <div class="p-post_index_list_operation">
+      <p id="post-like-<%= post.id %>">
+        <% if post.liked_by?(current_user) %>
+          <%= render "like", post: post %>
+        <% else %>
+          <%= render "dislike", post: post %>
+        <% end %>
+      </p>
+      <p>
+        <%= link_to "詳細", post %>
+        <%= link_to '更新', edit_post_path(post), data: { remote: true } %>
+        <%= link_to '削除', post_path(post), method: :delete, data: { confirm: '削除しますか?', remote: true } %>
+      </p>
+    </div>
+    
   </div>
 <% else %>
   <p>ログインしてください</p>

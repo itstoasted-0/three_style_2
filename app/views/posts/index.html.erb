@@ -3,15 +3,20 @@
 <div class="l-main_content_wrap">
 
   <div class ="p-post_index_left">
-    <h1>投稿一覧</h1>
-    <div id="posts">
-      <%= render @posts %>
+    <div class="p-post_index_left_content">
+      <h1>投稿一覧</h1>
+      <div id="posts">
+        <%= render @posts %>
+      </div>
     </div>
   </div>
-
+  
   <div class="p-post_index_right">
-    <div>
-      <%= render 'form', post: Post.new, value: "投稿" %>
+    <div class="p-post_index_right_content">
+      <h1 id="p-post_index_right_title">投稿</h1>
+      <div>
+        <%= render 'form', post: Post.new, value: "投稿" %>
+      </div>
     </div>
   </div>
 

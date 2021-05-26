@@ -1,6 +1,22 @@
 .p-post_index_left {
-  margin: 20px;
+  width: 70%;
+  .p-post_index_left_content {
+    margin: 0 auto;
+    width: 300px;
+  }
+  
 }
 .p-post_index_right {
-  margin: 20px 20px 20px 80px;
+  .p-post_index_right_content {
+  }
+}
+.p-post_index_list {
+  .p-post_index_list_content {
+  }
+  .p-post_index_list_operation {
+    display: flex;
+    p {
+      margin-right: 10px;
+    }
+  }
 }
