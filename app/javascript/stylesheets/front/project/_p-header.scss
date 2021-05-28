@@ -1,0 +1,92 @@
+
+.p-header {
+  width: 100%;
+  background-color: transparent;
+  .p-header_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .p-header_link_logo {
+      width: 200px;
+      h1 {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .p-header_link_logo:hover {
+      background: none;
+    }
+    .p-header_link_item {
+      margin: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    a:hover {
+      text-decoration: none;
+      background:linear-gradient(transparent 80%, rgb(58, 204, 197) 0%);
+    }
+  }
+}
+
+.p-drawer {
+  .p-drawer_nav {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    display: block;
+    background: rgba(0, 0, 0, .8);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    transform: translateY(-100%);
+    a {
+      display: flex;
+      color: #fff;
+      font-size: 16px;
+      padding: 20px 0;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    p {
+      color: #fff;
+      margin-left: 10px;
+    }
+    .p-drawer_nav_close {
+      position: relative;
+      padding-left: 20px;
+      /*バツ印線1*/
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 16px;
+        height: 1px;
+        background: #fff;
+        transform: rotate( 45deg );
+      }
+      /*バツ印線2*/
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 16px;
+        height: 1px;
+        background: #fff;
+        transform: rotate( -45deg );
+      }
+    }
+  }
+  .toggle {
+      transform: translateY( 0 );
+      opacity: 1;
+  }
+}

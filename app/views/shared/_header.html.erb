@@ -1,24 +1,52 @@
-<header class="l-header">
-  <div class="l-header_link">
-    <%= link_to root_path, class: 'l-header_link_logo' do %>
+<header class="l-header p-header">
+  <div class="p-header_link">
+    <%= link_to root_path, class: 'p-header_link_logo' do %>
       <h1><%= image_tag 'image/logo.png', alt: 'Three-Syle' %></h1>
     <% end %> 
 
     <% if user_signed_in? %>
       <%# ログイン時 %>
-      <%= link_to "TOP", root_path, class: "l-header_link_item" %>
-      <%= link_to 'ホーム', posts_path, class: "l-header_link_item" %>
-      <%= link_to 'ユーザー一覧', users_path, class: "l-header_link_item" %>
-      <%= link_to 'マイページ', user_path(current_user), class: "l-header_link_item" %>
-      <%= link_to "アカウント", edit_user_registration_path, class: "l-header_link_item" %>
-      <%= link_to "ログアウト", destroy_user_session_path, data: { confirm: "ログアウトしますか？" }, class: "l-header_link_item" %>
+      <%= link_to "TOP", root_path, class: "p-header_link_item" %>
+      <%= link_to 'ホーム', posts_path, class: "p-header_link_item" %>
+      <%= link_to 'ユーザー一覧', users_path, class: "p-header_link_item" %>
+      <%= link_to 'マイページ', user_path(current_user), class: "p-header_link_item" %>
+      <%= link_to "アカウント", edit_user_registration_path, class: "p-header_link_item" %>
+      <%= link_to "ログアウト", destroy_user_session_path, data: { confirm: "ログアウトしますか？" }, class: "p-header_link_item" %>
       <%= "【ログイン中】#{current_user.name}" %>
     <% else %>
       <%# 非ログイン時 %>
-      <%= link_to "トップ", root_path, class: "l-header_link_item" %>
-      <%= link_to "新規登録", new_user_registration_path, class: "l-header_link_item" %>
-      <%= link_to "ログイン", new_user_session_path, class: "l-header_link_item" %>
+      <%= link_to "トップ", root_path, class: "p-header_link_item" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "p-header_link_item" %>
+      <%= link_to "ログイン", new_user_session_path, class: "p-header_link_item" %>
     <% end %>
 
+  </div>
+</header>
+
+<header class="l-drawer p-drawer">
+  <%= link_to root_path, class: 'l-drawer_logo' do %>
+    <%= image_tag 'image/logo.png', alt: 'Three-Syle', class: "l-drawer_logo_img" %>
+  <% end  %>
+  <nav class="p-drawer_nav">
+    <% if user_signed_in? %>
+      <%# ログイン時 %>
+      <p><%= "【ログイン中】#{current_user.name}" %></p>
+      <%= link_to "TOP", root_path, class: "p-header_link_item" %>
+      <%= link_to 'ホーム', posts_path, class: "p-header_link_item" %>
+      <%= link_to 'ユーザー一覧', users_path, class: "p-header_link_item" %>
+      <%= link_to 'マイページ', user_path(current_user), class: "p-header_link_item" %>
+      <%= link_to "アカウント", edit_user_registration_path, class: "p-header_link_item" %>
+      <%= link_to "ログアウト", destroy_user_session_path, data: { confirm: "ログアウトしますか？" }, class: "p-header_link_item" %>
+      <p class="p-drawer_nav_close"><span>閉じる</span></p>
+    <% else %>
+      <%# 非ログイン時 %>
+      <%= link_to "トップ", root_path, class: "p-header_link_item" %>
+      <%= link_to "新規登録", new_user_registration_path, class: "p-header_link_item" %>
+      <%= link_to "ログイン", new_user_session_path, class: "p-header_link_item" %>
+      <p class="p-drawer_nav_close"><span>閉じる</span></p>
+    <% end %>
+  </nav>
+  <div id="hamburger">
+    <span></span>
   </div>
 </header>
