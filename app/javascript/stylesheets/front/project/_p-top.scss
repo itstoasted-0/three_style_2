@@ -1,0 +1,29 @@
+.p-top {
+  width: 100%;
+  .p-top_content {
+    text-align: center;
+    position: relative;
+    .p-top_content_bgi {
+      width: 95%;
+    }
+    .p-top_content_logo {
+      position: absolute;
+      top: 120px;
+      right: 70px;
+      width: 48%;
+    }
+    .p-top_content_guest {
+      position: absolute;
+      top: 300px;
+      right: 270px;
+      text-decoration: none;
+      color: #fff;
+      background-color: rgb(16, 209, 199);
+      border: 1px solid rgb(16, 209, 199);
+      padding: 20px;
+      border-radius: 10px;
+      a {
+      }
+    }
+  }
+}

@@ -1,5 +1,10 @@
 <% provide(:title, @user.name) %>
 <div>
+  <% if @user.user_img? %>
+    <%= image_tag @user.user_img.url %>
+  <% else %>
+    <%= image_tag 'icon/default.ico' %>
+  <% end %>
   <p><%= "name: #{@user.name}" %></p>
 </div>
 <div>

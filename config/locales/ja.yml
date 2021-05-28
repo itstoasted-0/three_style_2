@@ -2,11 +2,15 @@ ja:
   activerecord:
     models:
       post: 投稿
+      user: ユーザー
       like: いいね
     attributes:
       post:
         genre: ジャンル
         content: 内容
+      user:
+        name: 名前
+        user_img: アイコン
       like:
         user: ユーザー
         post: 投稿

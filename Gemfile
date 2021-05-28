@@ -19,8 +19,9 @@ gem 'devise'
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 
-# 画像投稿
+# 画像投稿機能
 gem 'carrierwave', '~> 2.0'
+# 画像リサイズ
 gem 'mini_magick'
 
 group :development, :test do

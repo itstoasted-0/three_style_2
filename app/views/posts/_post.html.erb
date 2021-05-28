@@ -2,7 +2,14 @@
   <div id="post-<%= post.id %>" class="p-post_index_list">
 
     <div class="p-post_index_list_content">
-      <p><%= link_to post.user.name, user_path(post.user) %></p>
+      <div class="p-post_index_lsit_content_profile">
+        <% if post.user.user_img? %>
+          <%= image_tag post.user.user_img.url %>
+        <% else %>
+          <%= image_tag 'icon/default.ico' %>
+        <% end %>
+        <p><%= link_to post.user.name, user_path(post.user) %></p>
+      </div>
       <p>【<%= post.genre %>】 : <%=  post.content %></p>
       <% if post.img? %>
         <p><%= image_tag post.img.url %></p>

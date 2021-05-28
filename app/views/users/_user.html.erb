@@ -1,8 +1,11 @@
 <% if user_signed_in? %>
   <div>
-    <p>
-      <%= link_to user.name, user_path(user) %>
-    </p>
+    <% if user.user_img? %>
+      <%= image_tag user.user_img.url %>
+    <% else %>
+      <%= image_tag 'icon/default.ico' %>
+    <% end %>
+    <%= link_to user.name, user_path(user) %>
   </div>
 <% else %>
   <p>ログインしてください</p>
