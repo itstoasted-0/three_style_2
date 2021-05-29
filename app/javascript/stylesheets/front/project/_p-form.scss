@@ -1,0 +1,23 @@
+.p-form {
+  input {
+    border: none;
+  }
+  .p-form_btn {
+    display: inline-block;
+    border-radius: 20%;
+    font-size: 10pt;
+    text-align: center; 
+    cursor: pointer;
+    padding: 10px 14px;
+    background: $main-color;   
+    color: #ffffff;   
+    line-height: 1rem; 
+    transition: .3s;
+    box-shadow: 3px 3px 3px #666666;    
+    &:hover {
+      box-shadow: none;  
+      color: $main-color;
+      background: #ffffff;
+    }
+  }
+}
