@@ -1,7 +1,12 @@
 .p-form {
   input {
     border: none;
+    background-color: #ecebeb;
   }
+  select {
+    border: none;
+    background-color: #ecebeb;
+  };
   .p-form_btn {
     display: inline-block;
     border-radius: 20%;

@@ -7,6 +7,21 @@
   <% end %>
   <p><%= "name: #{@user.name}" %></p>
 </div>
+
+<div class="follower">
+  <%= link_to followers_user_path(@user.id), id: "follower-count_#{@user.id}" do %>
+    <h5>フォロワー<%= @user.followers.count %>人</h5>
+  <% end %>
+</div>
+<div class="follow">
+  <%= link_to following_user_path(@user.id), id: "followed-count_#{@user.id}" do %>
+    <h5>フォロー<%= @user.followed.count %>人</h5>
+  <% end %>
+</div>
+<div>
+  <%= render "follow_form" %>
+</div>
+
 <div>
   <p>投稿一覧</p>
   <% @user.posts.each do |post| %>
