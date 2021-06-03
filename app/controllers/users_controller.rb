@@ -8,7 +8,8 @@ class UsersController < ApplicationController
 
   def show
     @posts = current_user.posts
-    @post = Post.find(params[:id])
+    #findメソッドだと投稿がないとnillを返してしまう
+    @post = Post.find_by(params[:id])
   end
 
   def following
