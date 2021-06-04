@@ -1,9 +1,34 @@
 <%= form_with model: post, local: false, class: "p-form" do |f| %>
-  <p><%= f.label :genre, "ジャンル" %> <%= f.select :genre, Post.genres.keys %></p>
-  <p><%= f.label :content, "投稿内容" %> <%= f.text_field :content %></p>
-  <p><%= f.file_field :img, accept: "image/png,image/jpeg,image/gif" %></p>
-  <%= f.submit value, class: "p-form_btn" %>
-  <% if value == '更新' %>
-    <%= link_to '取消', new_post_path, data: { remote: true } %>
-  <% end %>
+
+  <div class="p-form_genre">
+    <%= f.radio_button :genre, :other, checked: "checked" %>
+    <%= f.label :genre, "other" %>
+
+    <%= f.radio_button :genre, :surf %>
+    <%= f.label :genre, "Surf" %>
+
+    <%= f.radio_button :genre, :skate %>
+    <%= f.label :genre, "Skate" %>
+    
+    <%= f.radio_button :genre, :snow %>
+    <%= f.label :genre, "Snow" %>
+  </div>
+
+  <div class="p-form_content">
+    <p><%= f.label :content, "投稿内容" %> <%= f.text_area :content, class: "p-form_content" %></p>
+  </div>
+
+  <div class="p-form_img">
+    <%= f.file_field :img, accept: "image/png,image/jpeg,image/gif" %>
+  </div>
+
+  <div class="p-form_submit">
+    <%= f.submit value, class: "p-form_btn" %>
+    <% if value == 'Update' %>
+      <%= link_to '×', new_post_path, data: { remote: true } %>
+    <% end %>
+  </div>
+
 <% end %>
+
+  

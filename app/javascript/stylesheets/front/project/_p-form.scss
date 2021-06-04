@@ -1,28 +1,54 @@
 .p-form {
+  .p-form_genre {
+  }
+  .p-form_content {
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    textarea {
+      border: none;
+      background-color: #ecebeb;
+      padding: 10px;
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 2px rgb(82, 133, 124) inset;
+      }
+    }
+  }
+  .p-form_img {
+    margin: 60px 0 0;
+  }
+  .p-form_submit {
+    margin: 20px 0;
+    .p-form_btn {
+      display: inline-block;
+      border-radius: 20%;
+      font-size: 10pt;
+      text-align: center; 
+      cursor: pointer;
+      padding: 10px 14px;
+      background: $main-color;   
+      color: #ffffff;   
+      line-height: 1rem; 
+      transition: .3s;
+      box-shadow: 3px 3px 3px #666666;    
+      &:hover {
+        box-shadow: none;  
+        color: $main-color;
+        background: #ffffff;
+      }
+    }
+  }
   input {
     border: none;
     background-color: #ecebeb;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 2px rgb(82, 133, 124) inset;
+    }
   }
   select {
     border: none;
     background-color: #ecebeb;
-  };
-  .p-form_btn {
-    display: inline-block;
-    border-radius: 20%;
-    font-size: 10pt;
-    text-align: center; 
-    cursor: pointer;
-    padding: 10px 14px;
-    background: $main-color;   
-    color: #ffffff;   
-    line-height: 1rem; 
-    transition: .3s;
-    box-shadow: 3px 3px 3px #666666;    
-    &:hover {
-      box-shadow: none;  
-      color: $main-color;
-      background: #ffffff;
-    }
   }
 }

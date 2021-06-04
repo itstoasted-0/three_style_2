@@ -1,5 +1,5 @@
 .p-post_index_left {
-  width: 70%;
+  width: 700px;
   a {
     text-decoration: none;
     color: #000;
@@ -7,10 +7,34 @@
   .p-post_index_left_content {
     margin: 0 auto;
     width: 300px;
+    h1 {
+      position: relative;
+      padding: 10px 0;
+      font-family: 'Play', sans-serif;
+      &::after {
+        content: "";
+        display: block;
+        height: 5px;
+        background: linear-gradient(to right, #0FF0B3, #036ED9);
+      }
+    }
   }
 }
 .p-post_index_right {
   .p-post_index_right_content {
+    h1 {
+      position: relative;
+      padding: 10px 0;
+      font-family: 'Play', sans-serif;
+      &::after {
+        content: "";
+        display: block;
+        height: 5px;
+        background: linear-gradient(to right, #0FF0B3, #036ED9);
+      }
+    }
+    .p-post_index_right_content_NewEdit {
+    }
   }
 }
 .p-post_index_list {
