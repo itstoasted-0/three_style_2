@@ -1,0 +1,24 @@
+.p-user_index {
+  .p-user_index_title {
+    h1 {
+      position: relative;
+      padding: 10px 0;
+      font-family: 'Play', sans-serif;
+      &::after {
+        content: "";
+        display: block;
+        height: 5px;
+        background: linear-gradient(to right, #0FF0B3, #036ED9);
+      }
+    }
+  }
+  .p-user_index_content {
+    .p-user_index_content_detail {
+      margin: 50px 100px;
+      img {
+        width: 50px;
+      }
+    }
+
+  }
+}
