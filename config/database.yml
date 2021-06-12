@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: three_style_2_production
-  username: three_style_2
-  password: <%= ENV['THREE_STYLE_2_DATABASE_PASSWORD'] %>
+  database: three_style_production
+  username: root
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:hostname] %>
