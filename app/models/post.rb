@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   mount_uploader :img, ImgUploader
 
   enum genre: {
-    others: 0,
+    other: 0,
     surf: 1,
     skate: 2,
     snow: 3,
