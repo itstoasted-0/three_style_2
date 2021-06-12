@@ -3,7 +3,7 @@
     <% if user.user_img? %>
       <%= image_tag user.user_img.url %>
     <% else %>
-      <%= image_tag 'image/default2.png' %>
+      <%= image_tag 'image/default_icon.png' %>
     <% end %>
     <%= link_to user.name, user_path(user) %>
   </div>
