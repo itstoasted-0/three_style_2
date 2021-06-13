@@ -11,6 +11,10 @@
       top: 120px;
       right: 70px;
       width: 48%;
+      @include mq() {
+        top: 30px;
+        right: 22px;
+      }
     }
     .p-top_content_guest {
       position: absolute;
@@ -22,7 +26,11 @@
       border: 1px solid rgb(16, 209, 199);
       padding: 20px;
       border-radius: 10px;
-      a {
+      @include mq() {
+        top: 82px;
+        right: 18px;
+        font-size: 14px;
+        padding: 10px;
       }
     }
   }

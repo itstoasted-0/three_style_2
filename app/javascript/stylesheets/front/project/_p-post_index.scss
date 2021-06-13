@@ -1,5 +1,8 @@
 .p-post_index_left {
   width: 700px;
+  @include mq() {
+    width: 100%;
+  }
   a {
     text-decoration: none;
     color: #000;
@@ -21,6 +24,31 @@
   }
 }
 .p-post_index_right {
+  @include mq() {
+    display: none;
+  }
+  .p-post_index_right_content {
+    h1 {
+      position: relative;
+      padding: 10px 0;
+      font-family: 'Play', sans-serif;
+      &::after {
+        content: "";
+        display: block;
+        height: 5px;
+        background: linear-gradient(to right, #0FF0B3, #036ED9);
+      }
+    }
+    .p-post_index_right_content_NewEdit {
+    }
+  }
+}
+.p-post_index_right_2 {
+  display: none;
+  @include mq() {
+    display: block;
+    width: 100%;
+  }
   .p-post_index_right_content {
     h1 {
       position: relative;
