@@ -7,4 +7,4 @@ require('channels')
 require('jquery')
 
 import '../stylesheets/front/application.scss'
-import '../javascripts/front/common.js'
+import '../javascripts/front/header.js'

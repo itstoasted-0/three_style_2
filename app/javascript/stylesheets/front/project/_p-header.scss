@@ -23,10 +23,30 @@
     a {
       text-decoration: none;
       color: #333;
+      &:hover {
+        text-decoration: none;
+        background:linear-gradient(transparent 80%, rgb(58, 204, 197) 0%);
+      }
     }
-    a:hover {
-      text-decoration: none;
-      background:linear-gradient(transparent 80%, rgb(58, 204, 197) 0%);
+    
+    #dropdown {
+      list-style: none;
+      li {
+        ul {
+          display: none;
+          list-style: none;
+        }
+        a {
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          &:hover {
+            color: #fff;
+            background: rgb(58, 204, 197);
+          }
+        }
+      }
     }
   }
 }
