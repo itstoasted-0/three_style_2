@@ -1,6 +1,7 @@
 .l-main_content_wrap {
   display: flex;
   @include mq() {
-    display: block;
+    // display: block;
+    flex-direction: column;
   }
 }
