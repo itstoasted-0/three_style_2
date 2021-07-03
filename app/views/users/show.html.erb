@@ -1,37 +1,42 @@
 <% provide(:title, @user.name) %>
-<div>
-  <% if @user.user_img? %>
-    <%= image_tag @user.user_img.url %>
-  <% else %>
-    <%= image_tag 'image/default_icon.png' %>
-  <% end %>
-  <p><%= "name: #{@user.name}" %></p>
-</div>
 
-<div class="follower">
-  <%= link_to followers_user_path(@user.id), id: "follower-count_#{@user.id}" do %>
-    <h5>フォロワー<%= @user.followers.count %>人</h5>
-  <% end %>
-</div>
-<div class="follow">
-  <%= link_to following_user_path(@user.id), id: "followed-count_#{@user.id}" do %>
-    <h5>フォロー<%= @user.followed.count %>人</h5>
-  <% end %>
-</div>
-<div>
-  <%= render "follow_form" %>
-</div>
+<div class="p-user_show">
 
-<div>
-  <p>投稿一覧</p>
-  <% @user.posts.each do |post| %>
-    <p>【<%= post.genre %>】 : <%= post.content %></p>
-    <p><%= l post.created_at %></p>
-    <% if current_user.id == @post.user_id %>
-      <p>
-        <%= link_to "編集", edit_post_path(@post) %>
-        <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" } %>
-      </p>
+  <div class="p-user_show_imgname">
+    <% if @user.user_img? %>
+      <%= image_tag @user.user_img.url %>
+    <% else %>
+      <%= image_tag 'image/default_icon.png' %>
     <% end %>
-  <% end %>
+    <p><%= "name: #{@user.name}" %></p>
+  </div>
+
+  <div class="follower">
+    <%= link_to followers_user_path(@user.id), id: "follower-count_#{@user.id}" do %>
+      <h5>フォロワー<%= @user.followers.count %>人</h5>
+    <% end %>
+  </div>
+  <div class="follow">
+    <%= link_to following_user_path(@user.id), id: "followed-count_#{@user.id}" do %>
+      <h5>フォロー<%= @user.followed.count %>人</h5>
+    <% end %>
+  </div>
+  <div>
+    <%= render "follow_form" %>
+  </div>
+
+  <div>
+    <p>投稿一覧</p>
+    <% @user.posts.each do |post| %>
+      <p>【<%= post.genre %>】 : <%= post.content %></p>
+      <p><%= l post.created_at %></p>
+      <% if current_user.id == @post.user_id %>
+        <p>
+          <%= link_to "編集", edit_post_path(@post) %>
+          <%= link_to "削除", post_path(@post), method: :delete, data: { confirm: "削除しますか？" } %>
+        </p>
+      <% end %>
+    <% end %>
+  </div>
+
 </div>

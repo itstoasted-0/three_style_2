@@ -24,8 +24,10 @@
   }
 }
 .p-post_index_right {
+  margin: 0 50px;
   @include mq() {
-    display: none;
+    width: 300px;
+    margin: 0 auto;
   }
   .p-post_index_right_content {
     h1 {
@@ -38,30 +40,6 @@
         height: 5px;
         background: linear-gradient(to right, #0FF0B3, #036ED9);
       }
-    }
-    .p-post_index_right_content_NewEdit {
-    }
-  }
-}
-.p-post_index_right_2 {
-  display: none;
-  @include mq() {
-    display: block;
-    width: 100%;
-  }
-  .p-post_index_right_content {
-    h1 {
-      position: relative;
-      padding: 10px 0;
-      font-family: 'Play', sans-serif;
-      &::after {
-        content: "";
-        display: block;
-        height: 5px;
-        background: linear-gradient(to right, #0FF0B3, #036ED9);
-      }
-    }
-    .p-post_index_right_content_NewEdit {
     }
   }
 }

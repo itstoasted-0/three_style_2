@@ -1,34 +1,37 @@
-<%= form_with model: post, local: false, class: "p-form" do |f| %>
+<div class="p-form">
 
-  <div class="p-form_genre">
-    <%= f.radio_button :genre, :other, checked: "checked" %>
-    <%= f.label :genre, "other" %>
+  <%= form_with model: post, local: false do |f| %>
 
-    <%= f.radio_button :genre, :surf %>
-    <%= f.label :genre, "Surf" %>
+    <div class="p-form_genre">
+      <%= f.radio_button :genre, :other, class: "p-form_genre_radio_btn", id: "post_genre_other", checked: true %>
+      <%= f.label :genre_other, "Other", class:"p-form_genre_radio_label" %>
 
-    <%= f.radio_button :genre, :skate %>
-    <%= f.label :genre, "Skate" %>
-    
-    <%= f.radio_button :genre, :snow %>
-    <%= f.label :genre, "Snow" %>
-  </div>
+      <%= f.radio_button :genre, :surf, class: "p-form_genre_radio_btn", id: "post_genre_surf" %>
+      <%= f.label :genre_surf, "Surf", class:"p-form_genre_radio_label" %>
 
-  <div class="p-form_content">
-    <p><%= f.label :content, "投稿内容" %> <%= f.text_area :content, class: "p-form_content" %></p>
-  </div>
+      <%= f.radio_button :genre, :skate, class: "p-form_genre_radio_btn" %>
+      <%= f.label :genre_skate, "Skate", class:"p-form_genre_radio_label" %>
+      
+      <%= f.radio_button :genre, :snow, class: "p-form_genre_radio_btn" %>
+      <%= f.label :genre_snow, "Snow", class:"p-form_genre_radio_label" %>
+    </div>
 
-  <div class="p-form_img">
-    <%= f.file_field :img, accept: "image/png,image/jpeg,image/gif" %>
-  </div>
+    <div class="p-form_content">
+      <%= f.label :content, "投稿内容" %>
+      <%= f.text_area :content, class: "p-form_content_text" %>
+    </div>
 
-  <div class="p-form_submit">
-    <%= f.submit value, class: "p-form_btn" %>
-    <% if value == 'Update' %>
-      <%= link_to '×', new_post_path, data: { remote: true } %>
-    <% end %>
-  </div>
+    <div class="p-form_img">
+      <%= f.file_field :img, accept: "image/png,image/jpeg,image/gif" %>
+    </div>
 
-<% end %>
+    <div class="p-form_submit">
+      <%= f.submit value, class: "p-form_btn" %>
+      <% if value == 'Update' %>
+        <%= link_to '×', new_post_path, data: { remote: true } %>
+      <% end %>
+    </div>
 
-  
+  <% end %>
+
+</div>
